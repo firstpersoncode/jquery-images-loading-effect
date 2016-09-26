@@ -23,4 +23,5 @@ Nasser Maronie
   ```
 
  Loading element will be append into image's container (its parent).
+ work for ```<img src="some/image" /> & <div style="background: url(background/image);"></div>```
 
