@@ -17,6 +17,17 @@ module.exports = function (grunt) {
 			    dest: 'build/js/loadImages.js',
 			  },
 			},
+			cssmin: {
+			  target: {
+			    files: [{
+			      expand: true,
+			      cwd: 'build/css',
+			      src: ['*.css', '!*.min.css'],
+			      dest: 'build/css',
+			      ext: '.min.css'
+			    }]
+			  }
+			},
 			uglify: {
 			    my_target: {
 			      files: {
@@ -31,13 +42,14 @@ module.exports = function (grunt) {
 			  },
 			  css: {
 			    files: ['css/**/*.css', 'sass/**/*.scss'],
-			    tasks: ['sass'],
+			    tasks: ['sass', 'cssmin'],
 			  },
 			},
 		});
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.registerTask('default', ['sass', 'concat', 'uglify', 'watch']);
+	grunt.registerTask('default', ['sass', 'concat', 'cssmin', 'uglify', 'watch']);
 };

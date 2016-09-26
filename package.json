@@ -1,5 +1,5 @@
 {
-  "name": "Image Loading Effect",
+  "name": "loadingEffect",
   "version": "1.0.0",
   "description": "jQuery Plugin for loading effect when images still loading",
   "main": "loadImages.js",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0"
   }

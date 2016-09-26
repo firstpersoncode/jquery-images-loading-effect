@@ -2,3 +2,5 @@
 /node_modules
 /.sass-cache
 /main.scss
+/build/css/main.css
+/build/css/main.css.map
