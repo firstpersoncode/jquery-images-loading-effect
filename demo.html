@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>toggleNavBar.js</title>
+	<link rel="stylesheet" type="text/css" href="build/css/main.css">
+</head>
+<body>
+
+	<div id="div">
+	 	<div class="img-container">
+	 		<img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Vulpes_vulpes_laying_in_snow.jpg"/>
+	 	</div>
+	  	<div class="img-container">
+	  		<img src="https://s-media-cache-ak0.pinimg.com/originals/e0/3e/8b/e03e8bb4e9798b5f2f2ac86fa9fbcc55.jpg"/>
+	  	</div>
+	  	<div class="img-container">
+	  		<img src="http://www.hd-freewallpapers.com/latest-wallpapers/red-fox-habitat-wallpaper.jpg"/>
+	  	</div>
+	  	<div class="img-container">
+	  		<img src="http://image5.tuku.cn/wallpaper/Animal%20Wallpapers/9291_1280x800.jpg"/>
+	  	</div>
+	  	<div class="img-container">
+	  		<img src="https://images6.alphacoders.com/337/337099.jpg"/>
+	  	</div>
+	  	<div id="trigger-div" class="img-container">
+	    	<span>div container<br/>start loading demo !</span>
+	  	</div>
+	</div>
+
+	<div id="background">
+	  	<div class="bg"></div>
+	</div>
+
+	<div id="anchor">
+	 	<a href="#" class="img-container">
+	 		<img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Vulpes_vulpes_laying_in_snow.jpg"/>
+	 	</a>
+	  	<a href="#" class="img-container">
+	  		<img src="https://s-media-cache-ak0.pinimg.com/originals/e0/3e/8b/e03e8bb4e9798b5f2f2ac86fa9fbcc55.jpg"/>
+	  	</a>
+	  	<a href="#" class="img-container">
+	  		<img src="http://www.hd-freewallpapers.com/latest-wallpapers/red-fox-habitat-wallpaper.jpg"/>
+	  	</a>
+	  	<a href="#" class="img-container">
+	  		<img src="http://image5.tuku.cn/wallpaper/Animal%20Wallpapers/9291_1280x800.jpg"/>
+	  	</a>
+	  	<a href="#" class="img-container">
+	  		<img src="https://images6.alphacoders.com/337/337099.jpg"/>
+	  	</a>
+	  	<div id="trigger-anchor" class="img-container">
+	    	<span>anchor container<br/>start loading demo !</span>
+	  	</div>
+	</div>
+	
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="build/js/loadImages.js"></script>
+	<script type="text/javascript">
+		//init plugin
+		$('img').loadImages({
+			template : "<div class='box loading'>"+
+			    		"</div>"//add your own loading template
+		});
+
+	  	$('#background > div').loadImages({
+			template : "<div class='box loading'>"+
+			    		"</div>"//add your own loading template
+		});
+
+	  	//test loading effect
+		$('#background > div').on('click',function(){
+		   $(this).parent().find('.loading-img').fadeToggle();
+		});
+
+		$('#trigger-div, #trigger-anchor').on('click',function(){ 
+		  $(this).parent().find('.loading-img').fadeToggle();
+		});
+	</script>
+
+</body>
+</html>
