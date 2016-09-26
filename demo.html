@@ -59,7 +59,10 @@
 		//init plugin
 		$('img').loadImages({
 			template : "<div class='box loading'>"+
-			    		"</div>"//add your own loading template
+			    		"</div>",//add your own loading template
+			callback : function(){
+				console.log("some image loaded !") //callback when some image loaded
+	  		}
 		});
 
 	  	$('#background > div').loadImages({
