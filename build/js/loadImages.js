@@ -21,7 +21,7 @@ https://github.com/firstpersoncode
   Loading element will be append into image's container (its parent).
   
 ========================================================================= */
-(function($) {
+(function($) {//loading effect
     $.fn.loadImages = function(loadset) {
 
     	//default settings   
