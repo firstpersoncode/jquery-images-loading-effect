@@ -3,7 +3,7 @@ jQuery Plugin for loading effect when images still loading.
 
 Nasser Maronie
 * [Demo](http://codepen.io/nassermaronie/pen/RGVWYY)
-* [github]()
+* [github](https://github.com/firstpersoncode/jquery-images-loading-effect)
 
 
   loadImages.js 1.0
