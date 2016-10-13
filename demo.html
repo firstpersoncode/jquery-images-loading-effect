@@ -57,17 +57,14 @@
 	<script type="text/javascript" src="build/js/loadImages.js"></script>
 	<script type="text/javascript">
 		//init plugin
-		$('img').loadImages({
-			template : "<div class='box loading'>"+
-			    		"</div>",//add your own loading template
-			callback : function(){
-				console.log("some image loaded !") //callback when some image loaded
-	  		}
+		$('img').loadingEffect("<div class='box loading'></div>", function(){	
+			//callback after img loaded..
+			console.log("some image loaded !") //callback when some image loaded
 		});
 
-	  	$('#background > div').loadImages({
-			template : "<div class='box loading'>"+
-			    		"</div>"//add your own loading template
+	  	$('#background > div').loadingEffect("<div class='box loading'></div>", function(){	
+			//callback after img loaded..
+			console.log("some image loaded !") //callback when some image loaded
 		});
 
 	  	//test loading effect
