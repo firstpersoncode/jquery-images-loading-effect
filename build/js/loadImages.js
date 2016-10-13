@@ -49,7 +49,7 @@ https://github.com/firstpersoncode
                 $(this).on('load', function(){//remove loading element
                     $(this)
                         .parent()
-                        .find(".ss-loading-img")
+                        .find(".loading-img")
                         .fadeOut(function(){
                             // $(this).remove();  //we need to remove it in real life !
                         });
@@ -61,7 +61,7 @@ https://github.com/firstpersoncode
             });
 
             $(window).on('load', function(){//force remove loading element when document finish loading
-                $(".ss-loading-img")
+                $(".loading-img")
                     .fadeOut(function(){
                         // $(this).remove();  //we need to remove it in real life !
                     });
