@@ -1,4 +1,4 @@
-# jQuery Images Loading Effect 1.0
+# jQuery Images Loading Effect 1.1
 jQuery Plugin for loading effect when images still loading.
 
 Nasser Maronie
@@ -6,20 +6,19 @@ Nasser Maronie
 * [github](https://github.com/firstpersoncode/jquery-images-loading-effect)
 
 
-  loadImages.js 1.0
+  loadImages.js 1.1
   
-  Invoke the plugin with settings
+  Invoke plugin
+
    ```javascript
      	//init plugin
-     	$('img').loadImages({
-     		template : "<div class='box loading'>"+
-     		    		"</div>"//add your own loading template
-     	});
+     	$('img').loadingEffect(
+          "<div class='loading'></div>", //loading template
+          function(){
+          
+          //callback after img loaded..
 
-       	$('#background > div').loadImages({
-     		template : "<div class='box loading'>"+
-     		    		"</div>"//add your own loading template
-     	});
+      });
   ```
 
  Loading element will be append into image's container (its parent).
